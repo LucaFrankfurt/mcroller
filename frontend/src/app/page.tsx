@@ -243,11 +243,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-cream/30 py-24">
+      <section className="bg-cream/30 py-16 sm:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-semibold text-olive-700">Kontakt aufnehmen</h2>
-            <p className="text-base md:text-lg text-dark-brown/80">
+          <div className="mx-auto max-w-3xl text-center space-y-3 sm:space-y-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-olive-700">Kontakt aufnehmen</h2>
+            <p className="text-sm sm:text-base md:text-lg text-dark-brown/80">
               Du hast eine Frage oder möchtest direkt einen Rückruf? Öffne die passende Kachel und leg los.
             </p>
           </div>
@@ -258,20 +258,24 @@ export default function Home() {
               defaultOpen
             >
               <div className="grid gap-6 lg:grid-cols-2">
-                <div className="rustic-card p-8">
+                <div className="rustic-card p-6 sm:p-8">
                   <h3 className="text-2xl font-semibold text-olive-700">Adresse</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-dark-brown/85">
-                    <MapPinIcon className="mr-2 inline h-5 w-5 text-mustard-500" />Mörfelder Landstraße 12-18
+                  <p className="mt-4 text-base sm:text-lg leading-relaxed text-dark-brown/85">
+                    <MapPinIcon className="mr-2 inline h-5 w-5 text-mustard-500" />
+                    <span className="break-words">Mörfelder Landstraße 12-18</span>
                     <br />60599 Frankfurt am Main
                     <br />Deutschland
                   </p>
                 </div>
-                <div className="rustic-card p-8">
+                <div className="rustic-card p-6 sm:p-8">
                   <h3 className="text-2xl font-semibold text-olive-700">Kontakt</h3>
-                  <ul className="mt-4 space-y-3 text-lg leading-relaxed text-dark-brown/85">
+                  <ul className="mt-4 space-y-3 text-base sm:text-lg leading-relaxed text-dark-brown/85">
                     <li>
                       <PhoneIcon className="mr-2 inline h-5 w-5 text-mustard-500" />Telefon:
-                      <a href="tel:01577-6898240" className="ml-2 underline decoration-mustard/60 hover:text-mustard-500">
+                      <a
+                        href="tel:01577-6898240"
+                        className="ml-2 break-all underline decoration-mustard/60 underline-offset-4 hover:text-mustard-600"
+                      >
                         01577-6898240
                       </a>
                     </li>
@@ -279,7 +283,7 @@ export default function Home() {
                       <EnvelopeIcon className="mr-2 inline h-5 w-5 text-mustard-500" />E-Mail:
                       <a
                         href="mailto:McRollerffm@gmail.com"
-                        className="ml-2 underline decoration-mustard/60 hover:text-mustard-500"
+                        className="ml-2 break-all underline decoration-mustard/60 underline-offset-4 hover:text-mustard-600"
                       >
                         McRollerffm@gmail.com
                       </a>
@@ -288,7 +292,7 @@ export default function Home() {
                       <ChatBubbleLeftRightIcon className="mr-2 inline h-5 w-5 text-mustard-500" />WhatsApp:
                       <a
                         href="https://wa.me/message/VY5NXLLU2HDEC1"
-                        className="ml-2 underline decoration-mustard/60 hover:text-mustard-500"
+                        className="ml-2 break-all underline decoration-mustard/60 underline-offset-4 hover:text-mustard-600"
                       >
                         wa.me
                       </a>
@@ -304,14 +308,14 @@ export default function Home() {
               <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr),420px]">
                 <div className="rustic-card p-6">
                   <h3 className="text-xl font-semibold text-olive-700">Werkstattzeiten</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-dark-brown/80">
+                  <p className="mt-3 text-sm sm:text-base leading-relaxed text-dark-brown/80">
                     Termine nach Absprache – wir holen deinen Roller bei Bedarf ab und bringen ihn nach der Reparatur
                     wieder zurück.
                   </p>
                 </div>
                 <div className="rustic-card p-6 lg:p-8">
                   <h3 className="text-2xl font-semibold text-olive-700">Unser Standort</h3>
-                  <div className="mt-4 h-64 w-full overflow-hidden rounded-2xl rustic-border">
+                  <div className="mt-4 h-56 sm:h-64 w-full overflow-hidden rounded-2xl rustic-border">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.518!2d8.675789!3d50.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd096f8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sM%C3%B6rfelder%20Landstra%C3%9Fe%2012-18%2C%2060599%20Frankfurt%20am%20Main%2C%20Deutschland!5e0!3m2!1sen!2sde!4v1693526400!5m2!1sen!2sde"
                       width="100%"
