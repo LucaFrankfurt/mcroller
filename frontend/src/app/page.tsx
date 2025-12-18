@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Accordion, AccordionItem } from "../components/Accordion";
 import { CheckCircleIcon, MapPinIcon, PhoneIcon, EnvelopeIcon, CurrencyEuroIcon, BoltIcon, TruckIcon, CogIcon, ClipboardDocumentCheckIcon, ArrowPathIcon, ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
-import { AppointmentForm } from "../components/AppointmentForm";
+import { AppointmentFormClient } from "../components/AppointmentFormClient";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
                 href="#anfrage"
-                className="inline-flex items-center gap-2 rounded-full bg-mustard px-6 py-3 text-dark-brown font-medium shadow-lg shadow-black/20 transition hover:bg-mustard/90"
+                className="inline-flex items-center gap-2 rounded-full bg-mustard px-6 py-3 text-cream font-medium shadow-lg shadow-slate-900/30 transition hover:bg-mustard/80"
               >
                 Termin anfragen
               </Link>
@@ -237,7 +237,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <AppointmentForm />
+            <AppointmentFormClient />
           </div>
         </div>
       </section>
@@ -282,6 +282,15 @@ export default function Home() {
                         className="ml-2 underline decoration-mustard/60 hover:text-mustard-500"
                       >
                         McRollerffm@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <ChatBubbleLeftRightIcon className="mr-2 inline h-5 w-5 text-mustard-500" />WhatsApp:
+                      <a
+                        href="https://wa.me/message/VY5NXLLU2HDEC1"
+                        className="ml-2 underline decoration-mustard/60 hover:text-mustard-500"
+                      >
+                        wa.me
                       </a>
                     </li>
                   </ul>

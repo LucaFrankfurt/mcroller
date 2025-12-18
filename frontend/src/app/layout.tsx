@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["400", "500", "600", "700"],
 });
 
-const lora = Lora({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
@@ -16,7 +16,7 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: "McRoller – Roller Werkstatt Frankfurt",
-  description: "Rustikal inspiriertes Service-Erlebnis für Roller-Wartung, Inspektion und Reparatur in Frankfurt am Main.",
+  description: "Freundlicher, klarer Service für Roller-Wartung, Inspektion und Reparatur in Frankfurt am Main.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={`${playfair.variable} ${lora.variable} antialiased`}>
+      <body className={`${manrope.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

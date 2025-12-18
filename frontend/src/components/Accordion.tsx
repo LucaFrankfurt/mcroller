@@ -26,8 +26,10 @@ export function AccordionItem({ title, summary, children, defaultOpen = false }:
         </div>
         <ChevronDownIcon className="h-6 w-6 flex-shrink-0 text-mustard-500 transition-transform duration-300 group-open:rotate-180" />
       </summary>
-      <div className="px-6 pb-6 pt-1 text-dark-brown/85">
-        {children}
+      <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-open:grid-rows-[1fr]">
+        <div className="overflow-hidden px-6 pb-6 pt-1 text-dark-brown/85">
+          {children}
+        </div>
       </div>
     </details>
   );

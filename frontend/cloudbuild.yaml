@@ -1,0 +1,17 @@
+substitutions:
+  _IMAGE_TAG: "latest"
+  _NEXT_PUBLIC_BACKEND_URL: "http://localhost:4000"
+
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    dir: frontend
+    args:
+      - "build"
+      - "-t"
+      - "europe-west1-docker.pkg.dev/$PROJECT_ID/frontend/mcroller-frontend:${_IMAGE_TAG}"
+      - "--build-arg"
+      - "NEXT_PUBLIC_BACKEND_URL=${_NEXT_PUBLIC_BACKEND_URL}"
+      - "."
+
+images:
+  - "europe-west1-docker.pkg.dev/$PROJECT_ID/frontend/mcroller-frontend:${_IMAGE_TAG}"
